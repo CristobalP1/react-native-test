@@ -6,8 +6,6 @@ import ProductItemComponent from "../ProductItem/ProductItemComponent";
 export default function ListProductsComponent() {
   const { products } = useProductsContext();
 
-  console.log(products);
-
   return (
     <FlatList
       data={products}

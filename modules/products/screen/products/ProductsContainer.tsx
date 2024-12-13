@@ -4,11 +4,11 @@ import useProductsList from "./hooks/useProductsList";
 import { ProductsService } from "@/ddd/products/infrastructure/ProductsService";
 
 export default function ProductsContainer() {
-  const { isLoading, errorService } = useProductsList(new ProductsService());
+  const { isLoading, errorService,onRetry } = useProductsList(new ProductsService());
 
   return (
     <>
-      <ProductsComponent isLoading={isLoading} errorService={errorService} />
+      <ProductsComponent isLoading={isLoading} errorService={errorService} onRetry={onRetry} />
     </>
   );
 }

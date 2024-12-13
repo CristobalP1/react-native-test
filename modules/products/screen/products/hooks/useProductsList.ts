@@ -31,6 +31,7 @@ const useProductsList = (repository: IProductsInterface) => {
     return {
         isLoading,
         errorService,
+        onRetry: getListProducts
     }
 
 }
