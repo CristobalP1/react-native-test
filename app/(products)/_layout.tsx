@@ -2,14 +2,21 @@ import { View, Text, TouchableOpacity, Alert } from "react-native";
 import React from "react";
 import { router, Stack } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { signOut } from "@/utils/functions/signOut";
+import { useDispatch } from "react-redux";
 
 export default function ProductsLayout() {
 
+
+  const dispatch = useDispatch();
   const handlePress = () => {
     Alert.alert(
       "Información",
-      "Has presionado el botón.",
-      [{ text: "OK", onPress: () => console.log("Botón presionado") }],
+      "¿Estás seguro de que quieres cerrar sesión?",
+      [
+        { text: "Cancelar", style: "cancel" },
+        { text: "OK", onPress: () => signOut(dispatch) },
+      ],
       { cancelable: true }
     );
   };

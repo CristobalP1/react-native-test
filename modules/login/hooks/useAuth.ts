@@ -41,7 +41,7 @@ const useAuth = (repository: ILoginInterface) => {
                     token: response.token
                 })
             );
-            router.push("/(products)/products");
+            router.replace("/(products)/products");
             return response;
         } catch (error: any) {
             console.error('Error Login', error);
