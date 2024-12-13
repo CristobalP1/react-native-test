@@ -1,18 +1,28 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Alert } from "react-native";
 import React from "react";
 import { router, Stack } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 
 export default function ProductsLayout() {
+
+  const handlePress = () => {
+    Alert.alert(
+      "Información",
+      "Has presionado el botón.",
+      [{ text: "OK", onPress: () => console.log("Botón presionado") }],
+      { cancelable: true }
+    );
+  };
+
   return (
-    <Stack>
+    <Stack initialRouteName="products">
       <Stack.Screen
-        name="index"
+        name="products"
         options={{
-          title: "",
-          headerLeft: () => (
-            <TouchableOpacity onPress={() => router.back()}>
-              <Ionicons name="close-outline" size={28} />
+          title: "Home",
+          headerRight: () => (
+            <TouchableOpacity onPress={handlePress}>
+              <Ionicons name="person-circle" size={45} color="blue" />
             </TouchableOpacity>
           ),
         }}
@@ -20,12 +30,7 @@ export default function ProductsLayout() {
       <Stack.Screen
         name="[id]"
         options={{
-          title: "",
-          headerLeft: () => (
-            <TouchableOpacity onPress={() => router.back()}>
-              <Ionicons name="close-outline" size={28} />
-            </TouchableOpacity>
-          ),
+          title: "Producto",
         }}
       />
     </Stack>

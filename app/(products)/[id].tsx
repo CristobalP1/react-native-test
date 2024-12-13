@@ -1,10 +1,10 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import ProductDetailContainer from '@/modules/products/screen/productDetail/ProductDetailContainer'
 
 export default function ProductsIdScreen() {
   return (
-    <View>
-      <Text>ProductsIdScreen</Text>
-    </View>
+    <>
+      <ProductDetailContainer/>
+    </>
   )
 }
