@@ -7,7 +7,8 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 1. Clona este repositorio:
 
    ```bash
-https://github.com/CristobalP1/react-native-test.git
+   https://github.com/CristobalP1/react-native-test.git
+   ```
 
 2. Install dependencies
 
@@ -26,3 +27,10 @@ https://github.com/CristobalP1/react-native-test.git
 
 - **Expo**: `52`
 - **Node.js**: `v20.9.0`
+
+## Pass fake api
+
+{
+  "username": "mor_2314",
+  "password": "83r5^_"
+}
